@@ -10,9 +10,9 @@ import {
   users, properties, agents, companies, inquiries, 
   agentReviews, propertyRecommendations, propertyViews, 
   savedProperties, otps, bookings
-} from "@shared/schema";
-import { IStorage } from "./storage";
-import { db } from "./db";
+} from "@shared/schema.ts";
+import { IStorage } from "./storage.ts";
+import { db } from "./db.ts";
 import { eq, and, desc, gte, lte, inArray, sql, or, like, exists, not, gt, isNotNull } from "drizzle-orm";
 import session from "express-session";
 import createPgSession from "connect-pg-simple";
