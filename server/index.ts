@@ -84,9 +84,10 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-//   app.get('/', (req, res) => {
-//   res.send('✅ UrgentSales API is running on Cloud Run!');
-// });
+  app.get('/demo', (req, res) => {
+  res.send('✅ UrgentSales API is running on Cloud Run!');
+    console.log('✅ UrgentSales API is running on Cloud Run!');
+});
 
   const PORT = process.env.PORT || 5001; // Changed from 5000 to 5001
   // const HOST = '0.0.0.0' // Changed from 0.0.0.0 to localhost
