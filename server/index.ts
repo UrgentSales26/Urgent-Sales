@@ -1,8 +1,8 @@
 import express, { type Request, Response, NextFunction } from "express";
-import { registerRoutes } from "./routes";
-import { setupVite, serveStatic, log } from "./vite";
-import { initializeDatabase } from "./db";
-import { setupAuth } from "./auth";
+import { registerRoutes } from "./routes.ts";
+import { setupVite, serveStatic, log } from "./vite.ts";
+import { initializeDatabase } from "./db.ts";
+import { setupAuth } from "./auth.ts";
 import path from "path";
 import fs from "fs";
 
