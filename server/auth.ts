@@ -5,8 +5,8 @@ import session from "express-session";
 import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
 import nodemailer from "nodemailer";
-import { storage } from "./storage";
-import { User as SelectUser, verificationMethods } from "@shared/schema";
+import { storage } from "./storage.ts";
+import { User as SelectUser, verificationMethods } from "@shared/schema.ts";
 
 declare global {
   namespace Express {
