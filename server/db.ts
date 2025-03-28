@@ -1,7 +1,7 @@
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
-import { db, sql } from '@shared/schema';
-import { schema } from '@shared/schema'; // Add this line if needed
+import { db, sql } from '@shared/schema.ts';
+import { schema } from '@shared/schema.ts'; // Add this line if needed
 import pkg from 'pg';
 const { Pool } = pkg;
 import { log } from './vite';
