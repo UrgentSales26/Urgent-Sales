@@ -1,7 +1,7 @@
 import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
-import { setupAuth } from "./auth";
+import { storage } from "./storage.ts";
+import { setupAuth } from "./auth.ts";
 import { 
   insertPropertySchema, 
   insertAgentSchema, 
@@ -10,27 +10,27 @@ import {
   insertAgentReviewSchema,
   userRoles,
   approvalStatus
-} from "@shared/schema";
+} from "@shared/schema.ts";
 import { z } from "zod";
 import * as express from 'express';
-import { db } from './db';
+import { db } from './db.ts';
 import { count, sql } from 'drizzle-orm';
-import * as schema from '@shared/schema';
+import * as schema from '@shared/schema.ts';
 import { 
   getNotifications, 
   markNotificationAsRead, 
   markAllNotificationsAsRead,
   createNotification,
   sendRoleNotifications
-} from './notification-service';
-import { getNeighborhoodInsightsHandler } from './neighborhood-service';
+} from './notification-service.ts';
+import { getNeighborhoodInsightsHandler } from './neighborhood-service.ts';
 import { 
   handleContactForm,
   handleFeedbackForm,
   handleReportProblem,
   handlePropertyInterest 
-} from './email-service';
-import { upload, getFileUrl, deleteFile } from './file-upload';
+} from './email-service.ts';
+import { upload, getFileUrl, deleteFile } from './file-upload.ts';
 
 
 // Helper to catch errors in async routes
