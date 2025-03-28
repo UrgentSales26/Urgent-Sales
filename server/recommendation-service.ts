@@ -1,6 +1,6 @@
 import * as tf from '@tensorflow/tfjs-node';
-import { Property, User } from '@shared/schema';
-import { IStorage } from './storage';
+import { Property, User } from '@shared/schema.ts';
+import { IStorage } from './storage.ts';
 
 // Recommendation factors with weights
 const RECOMMENDATION_WEIGHTS = {
