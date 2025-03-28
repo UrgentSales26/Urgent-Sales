@@ -10,6 +10,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+
+app.get('/api/demo', (req: Request, res: Response) => {
+  res.json({ message: "🚀 Demo route is working!", timestamp: Date.now() });
+})
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
