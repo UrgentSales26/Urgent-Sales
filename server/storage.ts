@@ -6,7 +6,7 @@ import {
   type Company, type InsertCompany, type Inquiry, type InsertInquiry, 
   type AgentReview, type InsertAgentReview, type Otp, type InsertOtp,
   type Booking, type InsertBooking, userRoles
-} from "@shared/schema";
+} from "@shared/schema.ts";
 import session from "express-session";
 import createMemoryStore from "memorystore";
 import { randomInt } from "crypto";
