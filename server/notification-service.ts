@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { storage } from './storage';
-import { notifications, notificationTypes } from '@shared/schema';
+import { storage } from './storage.ts';
+import { notifications, notificationTypes } from '@shared/schema.ts';
 
 // Get notifications for the current user
 export async function getNotifications(req: Request, res: Response) {
